@@ -1,0 +1,32 @@
+@import "~@angular/material/theming";
+
+@mixin contact-theme($theme) {
+  $accent: map-get($theme, accent);
+
+  .social-links {
+    a {
+      margin: 0 10px;
+      color: mat-color($accent, 400);
+    }
+    &:first-child a,
+    &:last-child a {
+      margin: 0;
+    }
+  }
+  a.contact-button:enabled {
+    &:hover:enabled {
+      color: mat-color($mat-light-theme-foreground, text) !important;
+    }
+  }
+}
+
+.contact-message,
+.contact-subject {
+  width: 100%;
+}
+
+.contact-button {
+  float: right;
+  //color: mat-color($mat-light-theme-foreground, text) !important;
+  text-decoration: none;
+}

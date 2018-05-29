@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-12 col-md-10 offset-md-1 m-top-20 portfolio-header">
+    <h1>Empathize. Define. Ideate. Prototype. Test. Code.</h1>
+    <p>This portfolio was designed with Sketch and built myself with Angular, HTML, SASS, and Material in one day as a display of original works.</p>
+    <p><a href="../../assets/downloads/Loriah%20Pope%20Portfolio%20Presentation.pdf" download="">Download Portfolio Walkthrough</a></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-md-10 offset-md-1 m-top-20">
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-5 portfolio-item" *ngFor="let item of portfolioItems" id="{{item.id}}" (click)="viewItem(item.id)"></div>
+    </div>
+  </div>
+</div>
+

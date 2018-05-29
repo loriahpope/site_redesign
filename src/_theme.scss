@@ -1,0 +1,31 @@
+@import '~@angular/material/theming';
+@import 'app/about/about.component';
+@import 'app/resume/resume.component';
+@import 'app/contact/contact.component';
+@import 'app/portfolio/portfolio.component';
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Lato, sans-serif',
+  $display-1: mat-typography-level(20px, 32px),
+  $headline: mat-typography-level(36px, 48px),
+  $title: mat-typography-level(20px, 20px, 700),
+  $subheading-2: mat-typography-level(16px, 19px, 700),
+  $body-1: mat-typography-level(16px, 30px, 300),
+  $body-2: mat-typography-level(14px, 20px, 300),
+  $caption: mat-typography-level(14px, 14px, 300)
+);
+
+@include mat-core($custom-typography);
+
+$portfolio-app-primary: mat-palette($mat-grey, 600);
+$portfolio-app-accent:  mat-palette($mat-cyan, 200);
+
+$portfolio-app-warn:    mat-palette($mat-red);
+
+$portfolio-app-theme: mat-light-theme($portfolio-app-primary, $portfolio-app-accent, $portfolio-app-warn);
+
+@include angular-material-theme($portfolio-app-theme);
+@include about-theme($portfolio-app-theme);
+@include resume-theme($portfolio-app-theme);
+@include contact-theme($portfolio-app-theme);
+@include portfolio-theme($portfolio-app-theme);

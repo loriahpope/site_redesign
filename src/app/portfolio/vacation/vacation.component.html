@@ -1,0 +1,340 @@
+<div class="row">
+  <div class="col xs-12 col-md-10 offset-md-1 m-top-20 m-bot-20">
+    <h1 class="mat-headline megrim">Idea Submission Site</h1>
+
+    <p>
+      The Employee Vacation Tracker allows employees to request time off through a simple interface, as well as view the time off of their team.
+    </p>
+    <p>
+      I was the lead designer on this project. In addition to completing a heuristic review of the existing request system, I interviewed many users of the current site to understand their pain points and difficulties in preparation for designing the new tracker.
+    </p>
+    <p>
+      <em>
+        Due to my non-disclosure agreement, I will not be sharing actual images of the site as it was. Rather, all opinions and words are my own, and all prototypes are my own based on the original.
+      </em>
+    </p>
+
+    <div class="portfolio-hero text-center">
+      <img src="../../assets/images/time2.jpg" class="vacation-image">
+    </div>
+
+    <h2>1| Heuristic Evaluation of Existing Site </h2>
+
+    <h3>Initial Setup</h3>
+    <p>
+      The initial setup information seems like something we should already know about the user and allow them to confirm or update during setup. Furthermore, many employees may not know how many carryover days they have immediately.
+    </p>
+    <p>
+      For a global corporation, the list of work locations to select from is sparse and confusing. Certain items, such as 'State of Massachusetts' is not uniform with the city, state format, and 'San Francisco, CA' and 'California - not including San Francisco' is confusing as well.
+    </p>
+
+    <h3>Home</h3>
+    <p>
+      I could change how the user information is displayed so there are more logical groupings of information.
+    </p>
+    <ul>
+      <li>Name, Employee ID, Location</li>
+      <li>Employee Status, FSLA Status, Standard Hours, Standard Hours Effective Date</li>
+      <li>Time Record End Date, Time Record Begin Date, Pay Cut Off Time</li>
+      <li>Unclear is this information is necessary for an average full-time employee</li>
+    </ul>
+    <p>
+      It is also confusing to have a message stating that you cannot use the system as an exempt employee.
+    </p>
+
+    <h3>My Attendance</h3>
+    <p>
+      It would be nice to see employee request information in a more visual representation. The status of my pending request and teh new/edit request screen should be more noticeable than my employee information on this screen.
+    </p>
+    <h3>Save Request</h3>
+    <p>
+      I expect to see "Submit" as an option within the confirmation modal, rather than 'Confirm' and 'Reject' with the same visual treatment.
+    </p>
+    <h3>Error Screen</h3>
+    <p>
+      The error message is not entirely obvious on the page.
+    </p>
+    <h3>Success/Confirmation Screen</h3>
+    <p>
+      The vacation code is not commonly understood by everyone. This should be listed in full text.
+    <p>
+      There is not a lot of visual feedback on the screen to indicate that the request status changed
+    </p>
+    <p>
+      Cancelled requests should be removed from the approvals list.
+    </p>
+    <p>
+      Should last modified time/by be combined? Unless the user is able to sort, this may not be necessary. How are these columns used? If I am unable to edit requests, these columns will never update.
+    </p>
+
+    <h3>New Request</h3>
+    <p>
+      It would be nice to see a balance of vacation days as I am choosing the vacation code.
+    </p>
+    <p>
+      Does it make sense for the default code to be Bereavement? It would make more sense to default to "Vacation" or simply "Choose Time Off Type".
+    </p>
+    <h3>Vacation Balance</h3>
+    <p>
+      This page is not easily scanned by the user. The two most important numbers the user cares about are how much vacation they have for the year, and how much they have left to use.
+    </p>
+    <h3>My History</h3>
+    <p>
+      This page only shows how many days are available, but it would be nice to give the user some information about when they used those dates.
+    </p>
+
+    <h3>Time</h3>
+    <p>
+      This entire screen is meant for non-exempt employees, however there is no indication of this on the screen.
+    </p>
+
+    <h2>2| Empathize with the User </h2>
+
+    <h3>User Interviews</h3>
+    <p>
+      I gathered the following candid feedback by utilizing our internal social networking site. Below is a compiled list of notes, quotes, and general findings from speaking with users of the system:
+    </p>
+    <ul>
+      <li>
+        "I tried to request 8 days off, from a Wednesday to Friday of the following week. This should have been 8 days off. The form reported 10 days as the total number of days since it counted the weekend. This stopped me from submitting the request until I find out if that is how the calculation is done. It would be a poor design if I have to submit these as 2 separate requests if the system does not know about weekends.
+      </li>
+      <li>
+        "There is no option for volunteer days."
+      </li>
+      <li>
+        "There is no way a few hours off, only a half day."
+      </li>
+      <li>
+        "Exempt employees should not see the Time or History tabs.  They should be brought directly to MyAttendance upon login."
+      </li>
+      <li>
+        "Instead of showing unnecessary information like 'Holiday Schedule Election Date', 'Sensitive Position Certification Date', etc, on the Request Page, it should just show a uncluttered display of vacation balance."
+      </li>
+      <li>
+        "Managers should be able to input absences on behalf of their employees."
+      </li>
+      <li>
+        "When an employee enters a request, "To Date" should prepopulate with the same date as the "From Date".  They shouldn't have to select "To Date" for a single day absence."
+      </li>
+      <li>
+        "There are so many different Vacation Codes, why are Service Recognition and Voluntary Time off in the same option? I don't see what they have to do with each other. Service Recognition is earned. I don't know what Voluntary Time off means.  Isn't ALL time off voluntary?"
+      </li>
+      <li>
+        "Why can't an employee view the attendance of a peer to know if they are Out of Office?"
+      </li>
+      <li>
+        "There is no view to see absence details of manager's entire team, just the allocated days"
+      </li>
+      <li>
+        "Why is this only available for US employees?  Don't employees in other countries need a way to track attendance?"
+      </li>
+      <li>
+        "What are some things you think work well about the current submission process?"
+      </li>
+      <li>
+        "No way to sort or filter absence requests."
+      </li>
+    </ul>
+
+    <h3>User Research</h3>
+    <p>
+      After choosing the card model, I conducted users quick usability tests with users that had previously provided feedback. The following questions were asked:
+    </p>
+    <ol>
+      <li>Do you have direct reports? If so, how many?</li>
+      <li>How large is your team/group of people you regularly work with in an average week?</li>
+      <li>Are there any factors related to your team that would affect how you plan your vacation?</li>
+      <li>What information about you or your team's upcoming vacation might you be interested in seeing on your homepage?</li>
+    </ol>
+    <div class="col-12">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>User</th>
+          <th>Question 1</th>
+          <th>Question 2</th>
+          <th>Question 3</th>
+          <th>Question 4</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">User 1</th>
+          <td>
+            User does not have direct reports.
+          </td>
+          <td>
+            User works with a team of 40-50 people each week, including offshore employees.
+          </td>
+          <td>
+            Schedule is not dependent on other team members, so vacation is taken whenever needed. User does plan vacation ahead of time.
+          </td>
+          <td>
+            User is less interested in viewing upcoming team members' vacation, however finds it useful in scheduling meetings. In planning own vacation, user is interested in clearly seeing how many days are available. Same for manager's perspective in approving vacation requests without having to visit a separate screen. Managers should be able to see whole team's schedule in one place. Clean, simple interface.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">User 2</th>
+          <td>
+            User has 7 direct reports and is responsible for the approval of 8 more direct reports for immediate manager.
+          </td>
+          <td>
+            Aside from the 15 employees (all in same location) requiring user's approval, user also works with many different teams on different schedules totaling upwards of 100 people each week on average.
+          </td>
+          <td>
+            <strong>Previously</strong> - In the beginning of the year, a paper is passed around for employees to request initial vacation, based on seniority. <strong>Currently</strong> - Process is still based on seniority, however user must sit down with employees to ensure this still stands
+          </td>
+          <td>
+            User is interested in seeing a simple summary of own vacation (how many days taken/requested/available). For team, user is interested in seeing a simple summary of team absences for the current week with labels for the type of absence.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">User 3</th>
+          <td>
+            User has 18 direct reports.
+          </td>
+          <td>
+            In an average week, user typically works with 4 of 18 direct reports regularly.
+          </td>
+          <td>
+            Due to the nature of the team, vacation is usually consistent from year to year, aside from various personal days. <br>Currently, user has a physical color-coded calendar to plan/show when out of office.
+          </td>
+          <td>
+            User is interested in seeing a team view of absences more so than information about own vacation. User is interested in determining overlapping coverage, and would like to receive an alert if there is a conflict. User believes team should be able to see same information as manager. User would like to see different colors for different absence reasons. User would like notification of local Sick Day Policy when approving or viewing team vacation, especially for remote managers (not necessary for entire team to view). User would not find it useful to view team's historical absences.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">User 4</th>
+          <td>
+            User does not have direct reports.
+          </td>
+          <td>
+            User constantly works with different teams. These are typically small groups, but sometimes can be very large.
+          </td>
+          <td>
+            Vacation is not dependent on other team members, but generally the team tries to make sure there is coverage at all times.
+          </td>
+          <td>
+            For self, user is interested in viewing a simple calendar view. User often "Works out Loud". User wants to see holidays and be able to move through the calendar.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">User 5</th>
+          <td>
+            User has 6 direct reports, not including 2 offshore. Two are in the same office, two are in a different office, two work remotely.
+          </td>
+          <td>
+            On a given week, user works with about 15 people from various teams.
+          </td>
+          <td>
+            Team has very little overlap when requesting time off. Previously, team used a spreadsheet to track time off. Team prefers MyTime over PPM. Team keeps physical calendars to mark Out of Office.
+          </td>
+          <td>
+            User is not interested in seeing personal time off at a glance. User would like to see team absences about a week out, with the reason displayed over the absence bar. User wants to see manager and peers' schedules, with an easy method of viewing absences within different working groups. User does not see value in selecting holiday schedules in calendar because those tend to be more permanent.
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Defining User Personas</h3>
+    <p>
+      Through user interviews, we identified two primary personas:
+    </p>
+    <!-- Submitter -->
+    <div class="col-12">
+      <p>
+        <strong>1| Submitter</strong>
+      </p>
+      <p>Primary Tasks</p>
+      <ul>
+        <li>Request time off through the portal</li>
+        <li>Ability to view upcoming time off and days remaining</li>
+      </ul>
+      <p>Secondary Tasks</p>
+      <ul>
+        <li>Ability to view team's upcoming time off</li>
+      </ul>
+    </div>
+    <!-- End Submitter -->
+
+    <!-- Approver -->
+    <div>
+      <p>
+        <strong>2| Approver</strong>
+      </p>
+      <p>Primary Tasks</p>
+      <ul>
+        <li>Ability to review and approve time off requests</li>
+        <li>Ability to view direct reports' upcoming time off</li>
+      </ul>
+      <p>Secondary Tasks</p>
+      <ul>
+        <li>All tasks of Submitter persona</li>
+      </ul>
+    </div>
+    <!-- End Approver -->
+
+    <h2>3| Define the Problem </h2>
+    <p>
+      After defining the user personas, the problem statements can be defined as follows:
+    </p>
+    <div>
+      <ol class="details-text">
+        <li>
+          <p>
+            <strong>Submitters</strong> need to be able to easily view upcoming time off, as well as request time off.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Approvers</strong> need to be able to easily view direct reports' vacation requests in order to approve vacation requests with minimal overlap.
+          </p>
+        </li>
+      </ol>
+    </div>
+
+    <h2>4| Ideate Possible Solutions </h2>
+    <p>
+      After listening to feedback from users, I drew out screen ideas for what the redesigned application could look like.
+    </p>
+
+    <div class="row">
+      <div class="col-12">
+        <img class="img-fluid" src="../../assets/images/time_sketch.jpg" style="max-height: 800px;">
+      </div>
+    </div>
+    <div class="row">
+      <div style="padding-top: 15px;">
+        <strong>Features</strong>
+        <p>
+          After iterating through possible views, I ultimately decided it would be best to go with a simple dashboard widget that users can add to their Intranet Home Page. The majority of the functionality a user needs does not need to be contained in a full site that may assume the user spends more time requesting vacation than they do. Requests can happen from a modal window, same for approvals. This way, the application is as simple as possible.
+        <p>
+      </div>
+    </div>
+
+    <h2>5| Prototyping & User Feedback </h2>
+
+    <p>
+      <strong>High-Fidelity Prototype</strong>
+    </p>
+
+    <div class="row justify-content-center">
+      <img class="img-fluid col-xs-12 col-6 time-images" src="../../assets/images/time-mobile-1.jpg" style="max-height: 800px;">
+      <img class="img-fluid col-xs-12 col-6 time-images" src="../../assets/images/time-mobile-2.jpg" style="max-height: 800px;">
+    </div>
+    <div>
+
+    </div>
+
+    <h3>User Feedback</h3>
+    <ul>
+      <li>Users like the ability to view upcoming holidays across multiple holiday schedules.</li>
+      <li>Users like the ability to define and view user groups.</li>
+      <li>Users like the ability to move through the different calendar views.</li>
+      <li>User would like the ability to cancel or undo actions when requesting time off.</li>
+      <li>Days until next vacation/holiday/time off should only show one or two weeks in advance.</li>
+    </ul>
+
+  </div>
+</div>

@@ -1,0 +1,84 @@
+@import "~@angular/material/theming";
+
+@mixin resume-theme($theme) {
+  $accent: map-get($theme, accent);
+
+  .em.mat-accent {
+    color: mat-color($accent, 400);
+  }
+
+  .download-resume {
+    .material-icons {
+      font-size: inherit;
+    }
+  }
+
+  .skills {
+    text-align: right;
+  }
+
+  .work-experience,
+  .education,
+  .design-tools,
+  .dev-tools,
+  .certifications,
+  .speaking {
+    line-height: 20px;
+    h2 {
+      font-style: italic;
+    }
+    h3 {
+      &.resume-item-title {
+        margin-bottom: 10px;
+      }
+      &.resume-item-title-2 {
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+    h4 {
+      &.resume-item-subtitle-1 {
+        @extend .mat-caption;
+        color: mat-color($mat-light-theme-foreground, secondary-text);
+        margin-bottom: 10px;
+      }
+    }
+    h5 {
+      &.resume-item-subtitle-2 {
+        @extend .mat-caption;
+        font-style: italic;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      li {
+        @extend .mat-body-2;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media (max-width: 991.98px) {
+  .download-resume {
+    margin: 0 20px;
+  }
+  .experience {
+    margin: 0 20px;
+  }
+  .skills {
+    margin: 0 20px;
+    text-align: left;
+    ul {
+      padding-left: 0;
+    }
+  }
+}

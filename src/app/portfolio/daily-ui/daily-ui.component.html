@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-xs-12 col-md-10 offset-md-1 m-top-20">
+    <h1 class="mat-headline megrim">Daily UI Challenges</h1>
+
+    <p>
+      Recently, I've tried to expand my skills in UI design by participating in <a href="http://www.dailyui.co/" class="em mat-accent">Daily UI Challenges</a>. The goal is to become a better designer in 100 days - follow along with my journey here!
+    </p>
+
+    <div class="row m-bot-20" *ngFor="let day of dailyUIChallenges">
+      <div class="col-12">
+        <h2 class="mat-title">Day {{day.id}}</h2>
+        <h3 class="mat-subheading-2">Prompt: {{day.prompt}}</h3>
+        <div class="m-bot-20" [innerHTML]="day.description"></div>
+        <img class="img-fluid" src="../../assets/images/daily-ui/{{day.imgSrc}}" alt="{{day.alt}}" style="max-width: 75%;">
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,97 @@
+@import "~@angular/material/theming";
+
+@mixin portfolio-theme($theme) {
+  $accent: map-get($theme, accent);
+
+  .portfolio-header {
+    text-align: center;
+    line-height: 25px;
+    h1 {
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .portfolio-item {
+    height: 300px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+      &:before {
+        opacity: 0.2;
+      }
+      &:after {
+        position: absolute;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 400;
+        font-size: 28px;
+      }
+      &#help:after {
+        content: 'Employee Help Screen';
+      }
+      &#idea:after {
+        content: 'Employee Idea Site'
+      }
+      &#vacation:after {
+        content: 'Employee Vacation Request Site'
+      }
+      &#icons:after {
+        content: 'Material Icons'
+      }
+      &#handlettering:after {
+        content: 'Handlettering'
+      }
+      &#daily-ui:after {
+        content: 'Daily UI Challenges'
+      }
+    }
+    &:before {
+      content: '';
+      text-align: center;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    &#help:before {
+      background: url('/../../assets/images/help2.jpg');
+      background-size: 110%;
+      background-position: center;
+    }
+    &#idea:before {
+      background: url('/../../assets/images/idea2.jpg');
+      background-size: 110%;
+      background-position: center;
+    }
+    &#vacation:before {
+      background: url('/../../assets/images/time2.jpg');
+      background-size: 110%;
+      background-position: center;
+    }
+    &#icons:before {
+      background: url('/../../assets/images/icons2.jpg');
+      background-size: 110%;
+      background-position: center;
+    }
+    &#handlettering:before {
+      background: url('/../../assets/images/handlettering.jpg');
+      background-size: 110%;
+      background-position: center;
+    }
+    &#daily-ui:before {
+      background: url('/../../assets/images/daily-ui.png');
+      background-size: 110%;
+      background-position: center;
+    }
+  }
+}

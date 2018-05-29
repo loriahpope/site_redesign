@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+$grid-gutter-width: 10px !default;
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "_theme.scss";
+
+/** Base Classes */
+body {
+  margin: 0;
+}
+
+.p-0 {
+ padding: 0;
+}
+
+.m-bot-20 {
+  margin-bottom: 20px;
+}
+
+.m-top-20 {
+  margin-top: 20px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.megrim {
+  font-family: 'Megrim', cursive !important;
+}
+
+.portfolio-hero {
+  height: 400px;
+  overflow-y: hidden;
+  margin-bottom: 12px;
+}
+
+/** Homepage */
+.megrim-headline {
+  @extend .megrim;
+  margin: 0 !important;
+}

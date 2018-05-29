@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col xs-12 col-md-6 offset-md-1 m-top-20">
+    <h1 class="mat-headline megrim">Let's get in touch!</h1>
+
+    <div class="social">
+      <span class="social-links" *ngFor="let link of socialLinks"><a href="{{link.href}}">{{link.text}}</a></span>
+    </div>
+
+    <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="sendEmail()">
+        <mat-form-field class="contact-subject">
+          <input matInput placeholder="Subject" formControlName="subject">
+          <mat-error>Please leave a subject so I know what you're contacting me about!</mat-error>
+        </mat-form-field>
+        <mat-form-field class="contact-message">
+          <textarea matInput mat-autosize="true" enabled="true" placeholder="Leave a message" formControlName="message"></textarea>
+          <mat-error>Please leave a short message so I know what to respond to!</mat-error>
+        </mat-form-field>
+        <a mat-raised-button color="accent" class="contact-button" [disabled]="!contactForm.valid" [href]="'mailto:loriahpope@gmail.com?subject=' + subject + '&body=' + message">Submit</a>
+    </form>
+  </div>
+
+</div>

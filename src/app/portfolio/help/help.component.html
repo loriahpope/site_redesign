@@ -1,0 +1,121 @@
+<div class="row">
+  <div class="col xs-12 col-md-10 offset-md-1 m-top-20 m-bot-20">
+    <h1 class="mat-headline megrim">Employee Help Page</h1>
+
+    <p>
+      The Employee Help page is a portion of an enterprise intranet. The purpose is to provide a hub for employees to not only contact the Customer Service Desk to find answers to their tech problems, but for the Help Desk to provide a means of engaging with employees as well. This is intended to be a Desktop application, however it is built to be responsive with consideration given to primary interactions on mobile devices as well.
+    </p>
+
+    <p>
+      I was the primary User Experience Designer on this effort. I frequently interacted with Customer Service Representatives to understand the information they want to give to the employees, as well as with employees to understand what they most have trouble looking for.
+    </p>
+
+    <div class="portfolio-hero text-center">
+      <img src="../../assets/images/help2.jpg" class="help-image">
+    </div>
+
+    <h2>1| Empathize with the User</h2>
+    <p>
+      Through one-on-one user interviews and gathering feedback using an internal social network, I established two users of this system:
+    </p>
+
+    <h3>Customer Service Representatives</h3>
+    <p>
+      While Customer Service Representatives are infrequent users of this particular page, they will do a lot to drive its usage. They frequently field Help Desk calls for simple questions that do not require an employee actually calling in in order to resolve. In order to help employees effectively, they must ask them to sign up for services at the end of every call, including a Forgotten Password Service. Currently, Help Desk employees do not feel as if calling or chatting with individual users is the most effective way to provide employee assistance or inform employees of steps they need to take to avoid problems in the future.
+    </p>
+
+    <h3>General Employees</h3>
+    <p>
+      General employees are the most frequent users of this system. They are searching for quick solutions to their tech problems. They will likely not browse the page or spend too much time on it, so they will need to quickly find help-solutions. This type of user can be broken down further into two different personas:
+    </p>
+    <ol>
+      <li>
+        <strong>"Show me" Users"</strong>
+        <p>
+          These users prefer to find answers to their question on their own. They are easily deterred by wait times and prefer to easily search for answers to their questions.
+        </p>
+      </li>
+      <li>
+        <strong>"Talk to me" Users</strong>
+        <p>
+          These users prefer to validate their tech help by calling into the Help Desk, or by chatting with a Customer Service Representative. They are unlikely to utilize self-help solutions, and will search for a chat link or a phone number to call, even if speaking to a person may take longer.
+        </p>
+      </li>
+    </ol>
+
+    <h2>2| Define the Problem</h2>
+    <p>
+      After speaking with our users, the two problem statements can be defined as follows:
+    </p>
+    <ol>
+      <li>
+        <strong>Customer Service Representatives</strong> want to provide self-help solutions to users and discourage calling in for simple requests. They also want to provide users with a means of preventing technical concerns in the future by letting them know of things they can do today.
+      </li>
+      <li>
+        <strong>General Employees</strong> want to receive reliable help solutions quickly by either self-help searchable solutions or by reaching out to the help desk directly by phone or chat.
+      </li>
+    </ol>
+
+    <h2>3| Prototype & User Feedback</h2>
+    <p>
+      The solution was initially prototyped in Axure, providing a simple way to test with Users.
+    </p>
+    <div id="carouselExampleIndicators" class="carousel slide col-12" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner col-12 col-sm-8 text-center" role="listbox" style="margin: 0 auto; ">
+        <div class="carousel-item active">
+          <img class="d-block img-fluid" src="../../assets/images/help-desktop-small.png" style="margin: 0 auto;" alt="Desktop">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block img-fluid" src="../../assets/images/help-tablet-small.png" style="margin: 0 auto;" alt="Tablet">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block img-fluid" src="../../assets/images/help-mobile-small.png" style="margin: 0 auto;" alt="Mobile">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <i class="fa fa-chevron-left" aria-hidden="true" style="color: #333333; font-size: 24px;"></i>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <i class="fa fa-chevron-right" aria-hidden="true" style="color: #333333; font-size: 24px;"></i>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <h3 class="h3-details">Some feedback:</h3>
+    <ul>
+      <li>
+        "This will cause a complete paradigm shift once it is in use. I cannot wait to see it for real."
+      </li>
+      <li>
+        "This looks very good. Leaps and bounds better than the current system."
+      </li>
+      <li>
+        "The contact box is great. I like that multiple options are integrated."
+      </li>
+      <li>
+        "I can't wait for this to roll out, it looks great! It won't just make our role easier, but it'll reduce a lot of dead air and improve our customer interaction.
+      </li>
+      <li>
+        "...this will have a fundamental change on the level of support we can provide to our customers - I can't wait to see it go live!"
+      </li>
+      <li>
+        "This system will certainly improve the [Service Desk] analyst productivity and service levels."
+      </li>
+    </ul>
+
+    <h2>4| Develop the Solution</h2>
+    <p>
+      This prototype was developed using Bootstrap and Angular. I first built the skeleton in basic HTML, utilizing the Bootstrap Grid System to enable responsiveness and noting where I could utilize Angular to separate the view and the logic.
+    </p>
+    <p>
+      I then went through and added Angular to the project, substituting static Category names and self-help question data with dynamic data defined in an Angular component. I also added logic to show and calculate the Self-Help steps.
+    </p>
+    <button mat-raised-button color="accent" href="portfolio/help/help-demo" routerLink="/portfolio/help/help-demo">View Live Demo</button>
+
+  </div>
+</div>

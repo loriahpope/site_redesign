@@ -1,0 +1,151 @@
+<div class="container-fluid">
+  <div class="row nav-demo">
+    <p style="color: #333333; padding-left: 10px; margin-top: 14px;">Site Navigation</p>
+  </div>
+  <div class="row">
+    <h1 class="h1-demo">{{demoTitle}}</h1>
+  </div>
+  <!-- Show on large breakpoints -->
+  <div class="row demo-large">
+    <div class="col-xs-12 col-lg-8" style="padding-bottom: 20px;">
+      <div class="form-group">
+        <input class="form-control input-demo" type="text" placeholder="{{demoSearchPlaceholder}}">
+      </div>
+      <div>
+        <div class="row categories" style="margin-top: 20px;">
+          <div class="col-4">
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let category of categories" ngClass="(selectedCategory == category) ? 'selected-category' : ''"  (click)="selectCategory($event, category)">{{category.name}}</li>
+            </ul>
+          </div>
+          <div class="col-8">
+            <h3 class="h3-demo">{{selectedCategory.name}}</h3>
+            <div *ngFor="let question of selectedCategory.questions">
+              <p class="question-title">
+                {{question.title}}
+              </p>
+              <p class="demo-text">
+                {{question.answer}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-4 demo-text">
+      <div class="row">
+        <p class="col-10" style="color: #333333;">
+          You have completed <strong>{{completedSteps()}}</strong> of <strong>{{selfHelpSteps.length}}</strong> self-help setup steps!
+        </p>
+        <p class="col-2 text-right">
+          <button mat-button href="" (click)="viewSteps()">
+            <span *ngIf="!showSteps">Finish</span>
+            <span *ngIf="showSteps">Close</span>
+          </button>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width' : ((completedSteps()/selfHelpSteps.length)*100)+'%'}" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" *ngIf="showSteps" style="margin-top: 20px">
+        <div class="col-12">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let step of selfHelpSteps">
+              <div class="row">
+                <div class="col-6">
+                  <span *ngIf="step.completed" style="padding-right:30px; color: green;"><i class="material-icons">check</i></span>
+                  <span *ngIf="!step.completed" style="padding-right:30px; color: red;"><i class="material-icons">close</i></span>
+                  {{step.title}}
+                </div>
+                <div class="col-6 text-right">
+                  <button mat-button href="" (click)="completeStep(step)"><span *ngIf="!step.completed">Complete</span></button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-12">
+          <h2 class="h2-demo">Contact Us</h2>
+          <p class="demo-text">
+            Chat with an Agent (3 minute wait)
+          </p>
+          <p class="demo-text">
+            US Support: +1 (855) 123-4567 (5 minute wait)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Show on small breakpoints -->
+  <div class="row demo-small" style="padding-bottom: 20px;">
+    <div class="col-12">
+      <h2 class="h2-demo">Contact Us</h2>
+      <p class="demo-text">
+        Chat with an Agent (3 minute wait)
+      </p>
+      <p class="demo-text">
+        US Support: +1 (855) 123-4567 (5 minute wait)
+      </p>
+    </div>
+    <div class="col-12">
+      <div class="form-group">
+        <input class="form-control input-demo" type="text" placeholder="What do you need help with?">
+      </div>
+      <div class="form-group">
+        <!--<label for="CategorySelection">Select a Category</label>-->
+        <!--<select class="col-12 mobile-select" id="CategorySelection" name="CategorySelection" ng-options="category.name for category in categories" [(ngModel)]="selectedCategory" ng-change="selectMobile(category)">-->
+        <!--<select class="col-12 mobile-select" id="CategorySelection" name="CategorySelection">-->
+          <!--<option *ngFor="let "-->
+        <!--</select>-->
+      </div>
+      <div class="col-12">
+        <h3 class="h3-demo">{{selectedCategory.name}}</h3>
+        <div *ngFor="let question of selectedCategory.questions">
+          <p class="question-title">
+            {{question.title}}
+          </p>
+          <p class="demo-text">
+            {{question.answer}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <p class="col-10" style="color: #333333;">
+        You have completed <strong>{{completedSteps()}}</strong> of <strong>{{selfHelpSteps.length}}</strong> self-help setup steps!
+      </p>
+      <p class="col-2 text-right">
+        <a href="" (click)="viewSteps()">
+          <span *ngIf="!showSteps">Finish</span>
+          <span *ngIf="showSteps">Close</span>
+        </a>
+      </p>
+    </div>
+    <div class="col-12">
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width' : ((completedSteps()/selfHelpSteps.length)*100)+'%'}" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+    <div class="col-12" *ngIf="showSteps" style="margin-top: 20px">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let step of selfHelpSteps">
+          <div class="col-6">
+            <span *ngIf="step.completed" style="padding-right:30px; color: green;"><i class="fa fa-check" aria-hidden="true"></i></span>
+            <span *ngIf="!step.completed" style="padding-right:30px; color: red;"><i class="fa fa-times" aria-hidden="true"></i></span>
+            {{step.title}}
+          </div>
+          <div class="col-6 text-right">
+            <button mat-button (click)="completeStep(step)"><span *ngIf="!step.completed">Complete</span></button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

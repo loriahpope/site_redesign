@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col xs-12 col-md-10 offset-md-1 m-top-20 m-bot-20">
+    <h1 class="mat-headline megrim">Material Style Icons</h1>
+
+    <p>
+      In an effort to learn more about Adobe Illustrator, I practiced creating icons in the Material style.
+    </p>
+
+    <div class="portfolio-hero text-center">
+      <img src="../../assets/images/icons2.jpg" class="icons-image">
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 m-top-20">
+        <div class="row">
+          <div class="col-xs-12 col-3 text-center" *ngFor="let icon of iconItems">
+            <img class="img-fluid" src="../../assets/images/material-icons/{{icon.imgSrc}}" alt="{{icon.alt}}" style="max-width: 75%;">
+            <h3 class="text-center">{{icon.title}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

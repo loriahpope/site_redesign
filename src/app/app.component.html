@@ -1,20 +1,78 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container-fluid p-0">
+  <mat-toolbar color="primary" class="portfolio-toolbar-lg" *ngIf="path !== '/portfolio/help/help-demo'">
+    <mat-toolbar-row>
+      <span class="mat-display-1 megrim-headline">
+        <a href="about" routerLink="/about">Loriah Pope</a></span>
+      <span class="example-spacer"></span>
+      <span class="mat-body-1 nav-item">
+        <a href="about" routerLink="/about" routerLinkActive="active-link">About</a>
+      </span>
+      <span class="mat-body-1 nav-item">
+        <a href="portfolio" routerLink="/portfolio" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+true}">Portfolio</a>
+      </span>
+      <span class="mat-body-1 nav-item">
+        <a href="resume" routerLink="/resume" routerLinkActive="active-link">Resume</a>
+      </span>
+      <span class="mat-body-1 nav-item">
+        <a href="contact" routerLink="/contact" routerLinkActive="active-link">Contact</a>
+      </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
+  <mat-toolbar color="primary" class="portfolio-toolbar-sm" *ngIf="path !== '/portfolio/help/help-demo'">
+    <mat-toolbar-row>
+      <span class="mat-display-1 megrim-headline"><a href="about" routerLink="/about">Loriah Pope</a></span>
+      <span class="example-spacer"></span>
+      <button mat-button [matMenuTriggerFor]="menu" class="nav-menu">Menu <i class="material-icons">expand_more</i>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item class="mat-body-1"><a href="about" routerLink="/about" routerLinkActive="active-link"
+                                                    class=" button-nav-item">About</a></button>
+        <button mat-menu-item class="mat-body-1"><a href="portfolio" routerLink="/portfolio"
+                                                    routerLinkActive="active-link"
+                                                    class=" button-nav-item">Portfolio</a></button>
+        <button mat-menu-item class="mat-body-1"><a href="resume" routerLink="/resume" routerLinkActive="active-link"
+                                                    class=" button-nav-item">Resume</a></button>
+        <button mat-menu-item class="mat-body-1"><a href="contact" routerLink="/contact" routerLinkActive="active-link"
+                                                    class=" button-nav-item">Contact</a></button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="container-fluid p-0" *ngIf="isPortfolioPath()">
+  <mat-toolbar class="portfolio-toolbar-lg portfolio-item-nav">
+    <mat-toolbar-row>
+      <span class="mat-body-1 nav-item">
+        <a href="portfolio" routerLink="/portfolio" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+true}">View All</a>
+      </span>
+      <span class="mat-body-1 nav-item">
+        <a href="portfolio/help" routerLink="/portfolio/help" routerLinkActive="active-link">Help Screen</a>
+      </span>
+
+      <span class="mat-body-1 nav-item">
+        <a href="portfolio/idea" routerLink="/portfolio/idea" routerLinkActive="active-link">Idea Site</a>
+      </span>
+
+      <span class="mat-body-1 nav-item">
+        <a href="portfolio/vacation" routerLink="/portfolio/vacation" routerLinkActive="active-link">Vacation Request Site</a>
+      </span>
+
+      <span class="mat-body-1 nav-item">
+        <a href="portfolio/icons" routerLink="/portfolio/icons" routerLinkActive="active-link">Material Icons</a>
+      </span>
+
+      <span class="mat-body-1 nav-item">
+        <a href="portfolio/handlettering" routerLink="/portfolio/handlettering" routerLinkActive="active-link">Handlettering</a>
+      </span>
+
+      <span class="mat-body-1 nav-item">
+        <a href="portfolio/daily-ui" routerLink="/portfolio/daily-ui" routerLinkActive="active-link">Daily UI Challenges</a>
+      </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

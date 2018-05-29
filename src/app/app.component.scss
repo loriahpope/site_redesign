@@ -1,0 +1,77 @@
+@import "~@angular/material/theming";
+
+.mat-toolbar.mat-primary {
+  background: mat-color($mat-grey, 50)
+}
+
+.nav-item {
+  margin-left: 20px;
+  a {
+    color: mat-color($mat-light-theme-foreground, text);
+    &:hover {
+      color: mat-color($mat-light-theme-foreground, text) !important;
+    }
+  }
+}
+
+.megrim-headline {
+  a {
+    color: mat-color($mat-light-theme-foreground, text);
+    text-decoration: inherit;
+  }
+}
+
+.active-link {
+  font-weight: 700;
+}
+
+.portfolio-toolbar-sm {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  .nav-menu {
+    color: mat-color($mat-light-theme-foreground, text);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    a .button-nav-item {
+      color: mat-color($mat-light-theme-foreground, text) !important;
+      text-decoration: none;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+    }
+  }
+
+  :root.mat-menu-item {
+    font-weight: 300;
+  }
+
+  button.mat-body-1.mat-menu-item {
+    font-weight: 300 !important;
+  }
+}
+
+.portfolio-item-nav.mat-toolbar {
+    //background: transparent;
+  margin-top: 20px;
+  .mat-toolbar-row {
+    justify-content: center;
+    .nav-item {
+      &:hover {
+        //font-size: 20px;
+        //transition:all .1s ease-in-out;;
+      }
+      //a:hover {
+      //  text-decoration: none;
+      //}
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .portfolio-toolbar-sm {
+    visibility: visible;
+  }
+  .portfolio-toolbar-lg {
+    visibility: hidden;
+  }
+}

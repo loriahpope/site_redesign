@@ -52,15 +52,15 @@ export class DailyUiComponent implements OnInit {
       imgSrc: '005.png',
       alt: 'App Icon'
     },
-    // {
-    //   id: 6,
-    //   prompt: 'User Profile',
-    //   description: `
-    //   <p>Coming Soon!</p>
-    //   `,
-    //   imgSrc: '',
-    //   alt: 'User Profile'
-    // },
+    {
+      id: 6,
+      prompt: 'User Profile',
+      description: `
+      <p>Coming Soon!</p>
+      `,
+      imgSrc: '',
+      alt: 'User Profile'
+    },
     // {
     //   id: 7,
     //   prompt: 'Settings',

@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Sorry! You'll need a password to view my portfolio. Head over to the contact page to request it!"
+AuthUserFile "/home2/loriahpo/.htpasswds/public_html/portfolio/passwd"
+require valid-user
